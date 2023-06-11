@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.activity_main)
-        Log.d("DimasLog","Димас крутой программас")
+        Log.d("DimasLog","Димас не крутой программас")
     }
 
     override fun onPause() {
