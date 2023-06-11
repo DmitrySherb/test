@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        Log.d("DimasLog","Димас крутой программас")
+        Log.d("DimasLog","Димас очень крутой программас")
     }
 
     override fun onResume() {
