@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="under_sign_color">#34a36d</color>
+    <color name="blue">#0aaec1</color>
+
 </resources>
