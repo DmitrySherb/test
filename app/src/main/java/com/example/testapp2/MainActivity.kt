@@ -6,24 +6,22 @@ import android.os.PersistableBundle
 import android.text.Editable
 import android.util.Log
 import android.view.View
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.testapp2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
 
-        binding.googleButton.setOnClickListener {
-            Log.d("DimasLog", "Димас не крутой программас")
-        }
-        binding.loginButton.setOnClickListener {
-            val email: String = binding.et1.editText?.text.toString()
-            val password: String = binding.et2.editText?.text.toString()
-            Log.d("DimasLog", "Email:$email")
-            Log.d("DimasLog", "Password:$password")
-        }
+
     }
 
 
