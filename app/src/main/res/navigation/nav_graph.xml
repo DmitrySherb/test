@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/signInFragment">
-<fragment android:id="@+id/signInFragment"
-    tools:layout="@layout/sign_in_fragment"
-    android:name="com.example.testapp2.SignInFragment">
-    <action
-        android:id="@+id/action_signInFragment_to_loginFragment"
-        app:destination="@id/loginFragment" />
-</fragment>
-
-    <fragment android:id="@+id/loginFragment"
-        tools:layout="@layout/login_fragment"
-        android:name="com.example.testapp2.LoginFragment">
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.testapp2.signIn.SignInFragment"
+        tools:layout="@layout/sign_in_fragment">
         <action
-            android:id="@+id/action_loginFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
+            android:id="@+id/action_signInFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.testapp2.login.LoginFragment"
+        tools:layout="@layout/login_fragment">
     </fragment>
 </navigation>
