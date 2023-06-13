@@ -6,5 +6,15 @@
     app:startDestination="@id/signInFragment">
 <fragment android:id="@+id/signInFragment"
     tools:layout="@layout/sign_in_fragment"
-    android:name="com.example.testapp2.SignInFragment"/>
+    android:name="com.example.testapp2.SignInFragment">
+    <action
+        android:id="@+id/action_signInFragment_to_loginFragment"
+        app:destination="@id/loginFragment" />
+</fragment>
+
+    <fragment android:id="@+id/loginFragment"
+        tools:layout="@layout/login_fragment"
+        android:name="com.example.testapp2.LoginFragment">
+
+    </fragment>
 </navigation>
