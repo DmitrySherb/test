@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.testapp2.databinding.LoginFragmentBinding
 
 class LoginFragment:Fragment() {
@@ -15,6 +16,8 @@ class LoginFragment:Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = LoginFragmentBinding.inflate(layoutInflater)
+        binding.backButton.setOnClickListener{
+            findNavController().navigate(R.id.action_loginFragment_to_signInFragment)}
         return binding.root
 
 
