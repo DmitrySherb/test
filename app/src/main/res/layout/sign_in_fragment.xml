@@ -48,7 +48,8 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_email"
                 android:drawableTint="@color/under_sign_color"
-                tools:text="gfghdfg" />
+                tools:text="gfghdfg"
+                android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

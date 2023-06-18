@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 
 import com.example.testapp2.databinding.SignInFragmentBinding
@@ -22,6 +21,7 @@ class SignInFragment : Fragment() {
     ): View {
         binding = SignInFragmentBinding.inflate(layoutInflater)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -29,11 +29,15 @@ class SignInFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToLoginFragment())
         }
+        binding.instaButton.setOnClickListener {
+            findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToAuthenticationFragment())
+        }
         binding.googleButton.setOnClickListener {
-            signInViewModel.rename(email = binding.et1.editText?.text.toString())
+            signInViewModel.productRequest(id = binding.et1.editText?.text.toString().toInt())
         }
         signInViewModel.liveData.observe(viewLifecycleOwner) { email ->
             binding.tv1.text = email
         }
+
     }
 }

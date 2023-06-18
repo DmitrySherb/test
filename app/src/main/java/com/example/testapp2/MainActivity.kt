@@ -1,11 +1,8 @@
 package com.example.testapp2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.text.Editable
 import android.util.Log
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.testapp2.databinding.ActivityMainBinding
