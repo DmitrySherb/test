@@ -14,6 +14,8 @@ interface AuthenticationApi {
 
     @POST("auth/login")
     suspend fun auth(@Body authRequest: AuthRequest): User
+    @GET("products")
+    suspend fun getAllProducts():Products
 
     companion object {
         fun create(): AuthenticationApi {
